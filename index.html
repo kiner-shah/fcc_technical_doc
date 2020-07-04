@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				font-family: sans-serif, Arial;
+				display: grid;
+				grid-template-columns: 20% 80%;
+				grid-column-gap: 2px;
+			}
+			header {
+				font-size: 2em;
+			}
+			.main-section {
+				margin-top: 1%;
+				margin-bottom: 1%;
+				padding: 1%;
+				border-bottom: 1px solid black;
+			}
+			.main-section pre {
+				font-family: Lucida Sans;
+				background-color: whitesmoke;
+			}
+			#navbar {
+				height: 100%;
+				border-right: 1px solid gray;
+			}
+			#nav-header,
+			.nav-link {
+				width: 100%;
+			}
+			.nav-link {
+				text-decoration: none;
+				display: block;
+				padding: 10%;
+				border-top: 1px solid gray;
+				border-bottom: 1px solid gray;
+			}
+			.nav-link:hover {
+				background-color: whitesmoke;
+			}
+			@media screen and (max-width: 560px) {
+				body {
+					grid-template-columns: none;
+				}
+			}
+		</style>
+
+		<script>
+		</script>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<header id="nav-header">C/C++ Math functions</header>
+			<a class="nav-link" href="#pow">pow</a>
+			<a class="nav-link" href="#abs">abs</a>
+			<a class="nav-link" href="#floor">floor</a>
+			<a class="nav-link" href="#ceil">ceil</a>
+			<a class="nav-link" href="#exp">exp</a>
+		</nav>
+		<main id="main-doc">
+			<section id="pow" class="main-section">
+				<header>pow</header>
+				<p>Calculates power of a<sup>b</sup>.</p>
+				<p>Both a and b are floating point double precision numbers</p>
+				<code>
+					double a = pow(2, 4); // Stores 16 (2 raised to 4) in a
+				</code>
+			</section>
+			<section id="abs" class="main-section">
+				<header>abs</header>
+				<p>Calculates absolute value of a.</p>
+				<p>If a is negative, returns -a</p>
+				<code>
+					double a = abs(-2); // Returns 2
+				</code>
+				<p>If a is positive, returns a</p>
+				<code>
+					double b = abs(2); // Returns 2
+				</code>
+			</section>
+			<section id="floor" class="main-section">
+				<header>floor</header>
+				<p>Calculates floor value of a.</p>
+				<p>a is a double precision floating point number.</p>
+				<ul>
+					<li>If x is between a and a + 1, returns a</li>
+					<li>If x is a, returns a</li>
+					<li>If x is a + 1, returns a + 1</li>
+				</ul>
+				<code>
+					double a = floor(3.56); 	// Stores 3 in a
+				</code>
+			</section>
+			<section id="ceil" class="main-section">
+				<header>ceil</header>
+				<p>Calculates ceiling value of a</p>
+				<p>a is a double precision floating point number.</p>
+				<ul>
+					<li>If x is between a and a + 1, returns a + 1</li>
+					<li>If x is a, returns a</li>
+					<li>If x is a + 1, returns a + 1</li>
+				</ul>
+				<code>
+					double a = ceil(3.56); 	// Stores 4 in a
+				</code>
+			</section>
+			<section id="exp" class="main-section">
+				<header>exp</header>
+				<p>Calculates e<sup>x</sup></p>
+				<p>a is a double precision floating point number.</p>
+				<code>
+					double a = exp(2.3); 	// Stores 9.974 in a
+				</code>
+			</section>
+		</main>
+	</body>
+</html>
